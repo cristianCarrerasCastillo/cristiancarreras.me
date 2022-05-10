@@ -1,0 +1,79 @@
+body {
+    background-color: aliceblue;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div {
+    margin-left: 4px;
+    border-radius: 5px;
+}
+hr {
+    border-top: 2px solid rgb(155, 174, 255);
+    margin-right: 0.3em;
+}
+.grid-conteiner {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'info bio bio'
+    'info bio bio';
+    gap: 3px;
+    padding: 10px;
+}
+.menu {
+    background-color: rgb(79, 131, 228);
+    grid-area: header;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.cabecera {
+    grid-column: 1 / 2;
+}
+
+.burger{
+    grid-column: 3;
+    text-align: right;
+}
+
+.lateral-info {
+    background-color: rgb(79, 131, 228);
+    word-wrap: break-word;
+    grid-area: info;
+    width: 18em;
+    color:aliceblue;
+}
+.bar {
+    margin: 0.2em;
+    width: 0.8em;
+    height: 0.7em;
+    border: 0.1em solid var(--loader-bg-color);
+    border-left: 0.1em solid var(--loader-acc-color);
+    background-color:rgb(63, 165, 42);
+}
+
+.selector {
+    color: cornflowerblue;
+    text-align: center;
+}
+
+#example-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#noskill{
+    background-color: rgb(224, 224, 224);
+}
+#experiencia {
+    background-color:rgb(231, 231, 231);
+    border-radius: 8px;
+    text-align: justify;
+}
+#skill {
+    color:rgb(4, 180, 42);  
+}
+
