@@ -67,9 +67,9 @@ hr {
 }
 
 .cuerpo {
-    margin: 2em;
+    margin-left: 2em;
     margin-top: 1em;
-    min-width: 18em;
+    min-width: 20em;
 }
 
 .area-selector {
