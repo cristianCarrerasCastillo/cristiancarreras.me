@@ -109,31 +109,15 @@
             <div class="area-selector">
                 <div class="selector">🛋 iot | 🤖 automatización | 💻 dev</div>
                 <hr>
-                <div id="experiencia">
-                    <p>Company Name</p>
-                    <p>mm.yyyy To mm.yyyy</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue hendrerit nulla at vestibulum. Duis placerat gravida augue, nec porttitor massa efficitur in. Cras suscipit lobortis odio, sed dictum dolor dapibus ut. Integer ac vestibulum nulla. Vestibulum nec tortor risus. Vestibulum ut ex et mauris mattis ullamcorper. Ut aliquet</p>
-                </div>
-                <div id="experiencia">
-                    <p>Company Name 2</p>
-                    <p>mm.yyyy2 To mm.yyyy2</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue hendrerit nulla at vestibulum. Duis placerat gravida augue, nec porttitor massa efficitur in. Cras suscipit lobortis odio, sed dictum dolor dapibus ut. Integer ac vestibulum nulla. Vestibulum nec tortor risus. Vestibulum ut ex et mauris mattis ullamcorper. Ut aliquet</p>
-                </div>
-                <div id="experiencia">
-                    <p>Company Name 3</p>
-                    <p>mm.yyyy2 To mm.yyyy2</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue hendrerit nulla at vestibulum. Duis placerat gravida augue, nec porttitor massa efficitur in. Cras suscipit lobortis odio, sed dictum dolor dapibus ut. Integer ac vestibulum nulla. Vestibulum nec tortor risus. Vestibulum ut ex et mauris mattis ullamcorper. Ut aliquet</p>
-                </div>
-                <div id="experiencia">
-                    <p>Company Name 4</p>
-                    <p>mm.yyyy2 To mm.yyyy2</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue hendrerit nulla at vestibulum. Duis placerat gravida augue, nec porttitor massa efficitur in. Cras suscipit lobortis odio, sed dictum dolor dapibus ut. Integer ac vestibulum nulla. Vestibulum nec tortor risus. Vestibulum ut ex et mauris mattis ullamcorper. Ut aliquet</p>
-                </div>
-                <div id="experiencia">
-                    <p>Company Name 5</p>
-                    <p>mm.yyyy2 To mm.yyyy2</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue hendrerit nulla at vestibulum. Duis placerat gravida augue, nec porttitor massa efficitur in. Cras suscipit lobortis odio, sed dictum dolor dapibus ut. Integer ac vestibulum nulla. Vestibulum nec tortor risus. Vestibulum ut ex et mauris mattis ullamcorper. Ut aliquet</p>
-                </div>
+                {% block content %}
+                    {% for Post in post %}
+                        <div id="experiencia">
+                            <p>{{Post.empresa}}</p>
+                            <p>{{Post.inicio}} To {{Post.final}}</p>
+                            <p>{{Post.body}}</p>
+                        </div>
+                    {% endfor %}
+                {% endblock %}
             </div>
         </div>
     </div>
