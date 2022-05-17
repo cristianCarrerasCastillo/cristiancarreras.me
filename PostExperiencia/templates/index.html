@@ -17,6 +17,7 @@
                 <div id="burger-menu"></div>
                 <div id="burger-menu"></div>
                 <div id="burger-menu"></div>
+                <!-- ToDo: create a menu for this burger-menu-->
             </div>
         </div>
 
@@ -107,12 +108,14 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum ipsum nec dictum egestas. Phasellus venenatis odio at lobortis vestibulum. Nam et justo ultricies sem blandit mollis quis ut augue. Duis vestibulum varius pharetra. Vivamus a semper massa. Ut ac dui iaculis, mattis lectus et, rutrum velit. Sed quis nisl felis. Nam consectetur iaculis venenatis. Integer in diam bibendum.</p>
             </div>
             <div class="area-selector">
+                <!--ToDo: Convert "selector" a select menu for category -->
                 <div class="selector">🛋 iot | 🤖 automatización | 💻 dev</div>
                 <hr>
                 {% block content %}
                     {% for Post in post %}
                         <div id="experiencia">
                             <p>{{Post.empresa}}</p>
+                            <p>{{Post.cargo}}</p>
                             <p>{{Post.inicio}} To {{Post.final}}</p>
                             <p>{{Post.body}}</p>
                         </div>
@@ -121,6 +124,10 @@
             </div>
         </div>
     </div>
-    
+<!--To Do-->
+<!--* Convert "selector" a select menu for category -->
+<!--    -when select a category, the skills in a lateral info change with it, all in a real time (js)-->
+<!--    - when skills change, the skills bar will change animatedly (css, js)-->
+<!--* if a logo for a company isnt found, only its name will be displey (backend or js) -->
 </body>
 </html>
