@@ -65,7 +65,9 @@ hr {
     border-left: 0.1em solid var(--loader-acc-color);
 
 }
-
+.bio{
+    text-align: justify;
+}
 .cuerpo {
     margin-left: 2em;
     margin-top: 1em;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/statics/css/style.css">
 </head>
 <body>
+    {% block content %}
     <div class="grid-conteiner">
         <div class="menu">
             <div class="menu cabecera">
@@ -104,14 +105,16 @@
             </div>
         </div>
         <div class="cuerpo">
-            <div id="bio">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum ipsum nec dictum egestas. Phasellus venenatis odio at lobortis vestibulum. Nam et justo ultricies sem blandit mollis quis ut augue. Duis vestibulum varius pharetra. Vivamus a semper massa. Ut ac dui iaculis, mattis lectus et, rutrum velit. Sed quis nisl felis. Nam consectetur iaculis venenatis. Integer in diam bibendum.</p>
+            <div class="bio">
+                {% for Bio in bio %}
+                    <p>{{Bio.bio}}</p>
+                {% endfor %}
             </div>
             <div class="area-selector">
                 <!--ToDo: Convert "selector" a select menu for category -->
                 <div class="selector">🛋 iot | 🤖 automatización | 💻 dev</div>
                 <hr>
-                {% block content %}
+                
                     {% for Post in post %}
                         <div id="experiencia">
                             <p>{{Post.empresa}}</p>
