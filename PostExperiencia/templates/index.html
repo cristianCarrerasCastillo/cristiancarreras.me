@@ -117,9 +117,9 @@
                 
                     {% for Post in post %}
                         <div id="experiencia">
+                            <h3>{{Post.cargo}}</h3>
                             <p>{{Post.empresa}}</p>
-                            <p>{{Post.cargo}}</p>
-                            <p>{{Post.inicio}} To {{Post.final}}</p>
+                            <p>{{Post.inicio}} - {{Post.final}}</p>
                             <p>{{Post.body}}</p>
                         </div>
                     {% endfor %}

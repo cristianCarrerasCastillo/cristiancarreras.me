@@ -4,7 +4,7 @@ from .models import Post, Bio, skills
 
 # Create your views here.
 def cv(request):
-    post = Post.objects.all()
+    post = Post.objects.all().order_by('-inicio')
     bio = Bio.objects.all()
     #skills = skills.objects.all()
     return render(request, 'index.html', {'post': post, 'bio': bio})
