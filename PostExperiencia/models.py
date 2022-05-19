@@ -23,7 +23,7 @@ class Post(models.Model):
 class Bio(models.Model):
     nombre = models.CharField(max_length=100, verbose_name='Nombre')
     apellido = models.CharField(max_length=100, verbose_name='Apellido')
-    nacionalidad = models.CharField(max_length=100, verbose_name='Nacionalidad', blank=True, null=True)
+    nacionalidad = models.CharField(max_length=100, verbose_name='Ubicación', blank=True, null=True)
     telefono = models.CharField(max_length=100, verbose_name='Teléfono', blank=True, null=True)
     correo = models.EmailField(verbose_name='Correo electrónico', blank=True, null=True)
     linkedin = models.URLField(verbose_name='Linkedin', blank=True, null=True)

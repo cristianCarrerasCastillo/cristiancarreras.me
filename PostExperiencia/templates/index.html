@@ -13,7 +13,7 @@
     <div class="grid-conteiner">
         <div class="menu">
             <div class="menu cabecera">
-               <h1>Cristian Carreras</h1>
+               <h1>{{bio.nombre}} {{bio.apellido}}</h1>
             </div>
             <div class="menu burger">
                 <div id="burger-menu"></div>
@@ -26,9 +26,9 @@
         <div class="lateral-info">
             <div id="personal-data">
                 <h3>Personal Data</h3>
-                <p>📱 +569 51933245</p>
-                <p>📧 Contacto@cristiancarreras.me</p>
-                <p>📌 Santiago, Chile</p>
+                <p>📱 {{bio.telefono}}</p>
+                <p>📧 {{bio.correo}}</p>
+                <p>📌 {{bio.nacionalidad}}</p>
                 <hr>
             </div>
             <div id="skills">
