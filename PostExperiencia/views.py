@@ -6,6 +6,6 @@ from .models import Post, Bio, skills
 def cv(request):
     post = Post.objects.all().order_by('-inicio')
     bio = Bio.objects.first()
-    #skills = skills.objects.all()
+    #skill = skills.objects.all()
     return render(request, 'index.html', {'post': post, 'bio': bio})
 
