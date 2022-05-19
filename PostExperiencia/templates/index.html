@@ -115,13 +115,12 @@
                         <div id="experiencia">
                             <h3>{{Post.cargo}}</h3>
                             <p>{{Post.empresa}}</p>
-                            <p>{{Post.inicio}} - {%if Post.final == None %}
+                            <p>{{Post.inicio}} - {% if Post.final == None %}
                                 Actualmente
                                 {% else %}
                                 {{Post.final}}
                                 {% endif %}</p>
-                            </p>
-                            <p>{{Post.body}}</p>
+                            {{Post.body | safe}}
                         </div>
                     {% endfor %}
                 {% endblock %}

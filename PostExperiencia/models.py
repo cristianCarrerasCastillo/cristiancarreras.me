@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 #ToDo:
 # - Create a repo for images
@@ -7,7 +8,7 @@ from django.db import models
 class Post(models.Model):
     empresa = models.CharField(max_length=200, verbose_name='Empresa')
     cargo = models.CharField(max_length=100, verbose_name='Cargo')
-    body = models.TextField(verbose_name='Descripción del puesto')
+    body = RichTextField(verbose_name='Descripción del puesto')
     inicio = models.DateField(verbose_name='Fecha de inicio',blank=True, null=True)
     final = models.DateField(verbose_name='Fecha de finalización', blank=True, null=True)
     logo = models.ImageField(verbose_name='Logo de la empresa', upload_to='logos', blank=True, null=True)
