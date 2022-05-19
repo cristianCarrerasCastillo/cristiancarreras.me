@@ -11,6 +11,18 @@ div {
     border-radius: 5px;
     margin: 0;
 }
+
+a{
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+a:-webkit-any-link {
+    color: rgb(24, 27, 94);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 hr {
     border-top: 2px solid rgb(155, 174, 255);
     margin-right: 0.3em;
@@ -113,6 +125,7 @@ hr {
     margin: 0;
     margin-bottom: .5em;
     font-family: Verdana;
+    font-size: medium;
 }
 #skill {
     background-color:rgb(19, 221, 62);  

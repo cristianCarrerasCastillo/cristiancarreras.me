@@ -12,6 +12,7 @@ class Post(models.Model):
     inicio = models.DateField(verbose_name='Fecha de inicio',blank=True, null=True)
     final = models.DateField(verbose_name='Fecha de finalización', blank=True, null=True)
     logo = models.ImageField(verbose_name='Logo de la empresa', upload_to='logos', blank=True, null=True)
+    linkEmpresa = models.URLField(verbose_name='Link de la empresa', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Experiencia Laboral'
