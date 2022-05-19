@@ -119,7 +119,12 @@
                         <div id="experiencia">
                             <h3>{{Post.cargo}}</h3>
                             <p>{{Post.empresa}}</p>
-                            <p>{{Post.inicio}} - {{Post.final}}</p>
+                            <p>{{Post.inicio}} - {%if Post.final == None %}
+                                Actualmente
+                                {% else %}
+                                {{Post.final}}
+                                {% endif %}</p>
+                            </p>
                             <p>{{Post.body}}</p>
                         </div>
                     {% endfor %}
@@ -127,10 +132,6 @@
             </div>
         </div>
     </div>
-<!--To Do-->
-<!--* Convert "selector" a select menu for category -->
-<!--    -when select a category, the skills in a lateral info change with it, all in a real time (js)-->
-<!--    - when skills change, the skills bar will change animatedly (css, js)-->
-<!--* if a logo for a company isnt found, only its name will be displey (backend or js) -->
+
 </body>
 </html>
