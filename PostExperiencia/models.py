@@ -28,13 +28,13 @@ class Bio(models.Model):
     correo = models.EmailField(verbose_name='Correo electrónico', blank=True, null=True)
     linkedin = models.URLField(verbose_name='Linkedin', blank=True, null=True)
     github = models.URLField(verbose_name='Github', blank=True, null=True)
-    bio = models.TextField(verbose_name='Biografía', blank=True, null=True)
+    bio = RichTextField(verbose_name='Biografía')
 
     class Meta:
         verbose_name = 'Biografía'
         verbose_name_plural = 'Biografía'
     def __str__(self):
-        return self.nombre
+        return (self.nombre + ' ' + self.apellido)
 
 class skills(models.Model):
     skill = models.CharField(max_length=50, verbose_name='Habilidad')
