@@ -7,6 +7,7 @@
     <title>CV | Cristian Carreras</title>
     {% load static %}
     <link rel="stylesheet" href={% static '/css/style.css' %}>
+    <link rel="shortcut icon" href={% static '/icons8-key-16.png' %} type="image/x-icon">
 </head>
 <body>
     {% block content %}
@@ -107,6 +108,7 @@
         </div>
         <div class="cuerpo">
             <div class="bio">
+                <h3>Resumen</h3>
                 <p>{{bio.bio | safe}}</p>
             </div>
             <div class="area-selector">
